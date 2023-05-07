@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from footballApp.forms import CustomUserCreationForm
+from django.shortcuts import render, redirect
+from footballApp.forms import CustomUserCreationForm, GameForm
 
 # Create your views here.
 def indexPage(request):
@@ -22,3 +22,18 @@ def registrationPage(request):
     }
 
     return render(request, 'registration.html', formData)
+
+
+def addGame(request):
+    if request.method == "POST":
+        form = GameForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+
+    form = GameForm()
+    data = {
+        'form': form,
+    }
+
+    return render(request, 'addGame.html', data)

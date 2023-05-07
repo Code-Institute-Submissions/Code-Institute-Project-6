@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from footballApp.views import indexPage, registrationPage
+from footballApp.views import indexPage, registrationPage, addGame
 
 
 urlpatterns = [
@@ -24,4 +24,5 @@ urlpatterns = [
     path('', indexPage, name="index"),
     path('registration/', registrationPage, name="registration"),
     path('', include('django.contrib.auth.urls')),
+    path('addgame/', addGame, name="addgame"),
 ]
