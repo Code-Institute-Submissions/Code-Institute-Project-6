@@ -1,4 +1,5 @@
 {% load static %}
+{% load split %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -67,37 +68,43 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="d-flex team-vs">
-            <span class="score">4-1</span>
-            <div class="team-1 w-50">
-              <div class="team-details w-100 text-center">
-                <h3>LA LEGA <span>(win)</span></h3>
-                <ul class="list-unstyled">
-                  <li>Anja Landry (7)</li>
-                  <li>Eadie Salinas (12)</li>
-                  <li>Ashton Allen (10)</li>
-                  <li>Baxter Metcalfe (5)</li>
-                </ul>
+    {% for game in games %}
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="d-flex team-vs">
+              <span class="score">{{ game.goalsFirstTeam }}-{{ game.goalsSecondTeam }}</span>
+              <div class="team-1 w-50">
+                <div class="team-details w-100 text-center">
+                  <h3>{{ game.firstTeam }} <span>({{ game.firstTeamStatus }})</span></h3>
+                  <ul class="list-unstyled">
+                    {% for playerFirstTeam in game.playersFirstTeam|split %}
+                      <li>{{ playerFirstTeam }}</li>
+                    {% endfor %}
+                  </ul>
+                </div>
               </div>
-            </div>
-            <div class="team-2 w-50">
-              <div class="team-details w-100 text-center">
-                <h3>JUVENDU <span>(loss)</span></h3>
-                <ul class="list-unstyled">
-                  <li>Macauly Green (3)</li>
-                  <li>Arham Stark (8)</li>
-                  <li>Stephan Murillo (9)</li>
-                  <li>Ned Ritter (5)</li>
-                </ul>
+              <div class="team-2 w-50">
+                <div class="team-details w-100 text-center">
+                  <h3>{{ game.secondTeam }} <span>({{ game.secondTeamStatus }})</span></h3>
+                    <ul class="list-unstyled">
+                      {% for playerSecondTeam in game.playersSecondTeam|split %}
+                        <li>{{ playerSecondTeam }}</li>
+                      {% endfor %}
+                    </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        {% if user.is_authenticated %}
+          {% if user.username == game.eventOwner %}
+            <a href="{% url 'update' game.id %}" class="btn btn-primary btn-sm">Update</a>
+            <a href="{% url 'delete' game.id %}" class="btn btn-primary btn-sm">Delete</a>
+          {% endif %}
+        {% endif %}
       </div>
-    </div>
+    {% endfor %}
     <div class="site-section bg-dark">
       <div class="container">
         <div class="row">
@@ -110,16 +117,22 @@
                 <div class="widget-vs">
                   <div class="d-flex align-items-center justify-content-around justify-content-between w-100">
                     <div class="team-1 text-center">
-                      <h3>Football League</h3>
+                      <h3>{{ nextGame.firstTeam }}</h3>
                     </div>
                     <div>
                       <span class="vs"><span>VS</span></span>
                     </div>
                     <div class="team-2 text-center">
-                      <h3>Soccer</h3>
+                      <h3>{{ nextGame.secondTeam }}</h3>
                     </div>
                   </div>
                 </div>
+              </div>
+              <div class="text-center widget-vs-contents mb-4">
+                <h4>World Cup League</h4>
+                <p class="mb-5">
+                  <strong class="text-primary">New Euro Arena</strong>
+                </p>
               </div>
             </div>
           </div>
@@ -136,62 +149,15 @@
                   </tr>
                 </thead>
                 <tbody>
+                {% for team in teams %}
                   <tr>
-                    <td>1</td>
-                    <td><strong class="text-white">Football League</strong></td>
-                    <td>22</td>
-                    <td>3</td>
-                    <td>2</td>
+                    <td>{{ team.place }}</td>
+                    <td><strong class="text-white">{{ team.teamName }}</strong></td>
+                    <td>{{ team.win }}</td>
+                    <td>{{ team.draw }}</td>
+                    <td>{{ team.loss }}</td>
                   </tr>
-                  <tr>
-                    <td>2</td>
-                    <td><strong class="text-white">Soccer</strong></td>
-                    <td>22</td>
-                    <td>3</td>
-                    <td>2</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td><strong class="text-white">Juvendo</strong></td>
-                    <td>22</td>
-                    <td>3</td>
-                    <td>2</td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td><strong class="text-white">French Football League</strong></td>
-                    <td>22</td>
-                    <td>3</td>
-                    <td>2</td>
-                  </tr>
-                  <tr>
-                    <td>5</td>
-                    <td><strong class="text-white">Legia Abante</strong></td>
-                    <td>22</td>
-                    <td>3</td>
-                    <td>2</td>
-                  </tr>
-                  <tr>
-                    <td>6</td>
-                    <td><strong class="text-white">Gliwice League</strong></td>
-                    <td>22</td>
-                    <td>3</td>
-                    <td>2</td>
-                  </tr>
-                  <tr>
-                    <td>7</td>
-                    <td><strong class="text-white">Cornika</strong></td>
-                    <td>22</td>
-                    <td>3</td>
-                    <td>2</td>
-                  </tr>
-                  <tr>
-                    <td>8</td>
-                    <td><strong class="text-white">Gravity Smash</strong></td>
-                    <td>22</td>
-                    <td>3</td>
-                    <td>2</td>
-                  </tr>
+                {% endfor %}
                 </tbody>
               </table>
             </div>
