@@ -16,10 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from footballApp.views import indexPage
+from footballApp.views import indexPage, registrationPage
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', indexPage, name="index")
+    path('', indexPage, name="index"),
+    path('registration/', registrationPage, name="registration")
 ]
