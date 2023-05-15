@@ -1,39 +1,73 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+## The purpose of this site 
 
-Welcome,
+This site has intention of enabling users not only to read and review football event, but to participate by registering and leaving comments below events. Our goal is to create a community which would share their impression.
 
-This is the Code Institute student template for Codeanywhere. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## User Experience: User Goals
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **March 3rd, 2023**
+**First time site visitors would like to**
 
-## Codeanywhere Reminders
+ * Easily navigate on the site.
+ * Read posts and see the options to register/login in order to leave their comments and create events.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+**Returning registered users would like**
 
-`python3 -m http.server`
+  * View, create, edit and delete events and comments.
+  * View other users and events.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+## User Experience: Site Owners Goals
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+ * Enable easy to navigate experience for every site visitor or user.
+ * Enable any site visitor to easily create account.
+ * Enable every user to easily log in.
 
-`http_server`
+## User Experience: User Stories
+1. As a Site Admin I can create, edit and delete posts so that I can fully manage blog content (implemented).
+2. As a Site Admin I can edit and delete comments so that I have full CRUD control over the comments section (not implemented).
+3. As a site user I can view a list of events (implemented).
+4. As a site user I can register my own account so that I can add new events (implemented).
+5. As a site user I can register my own account so that I can leave comments below events (not implemented).
+6. As a site user I can update and delete events (implemented).
+7. As a site user I can easily login (implemented).
+8. As a site user I can easily logout (implemented).
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## User Experience: Strategy
+* Focus:
+The focus of this project is to provide information and teams's statistic of Soccer world cup.
+* Definition:
+Soccer world cup is a site for visitors who want to share their opinion about the tournament.
+* Value:
+The registered users can leave comments and see other users's comments below all events.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+## User Experience: Scope
+**Features**:
+- **Navigation menu** - The navigation menu is clear and consistent for all visitors and users.
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- **Home page** - Home page enables visitors/users to easily view events or use navigation menu functions.
 
-To log into the Heroku toolbelt CLI:
+- **Register/Login page** - Site visitors can register at register page or sign in at login page.
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- **Update/Delete event** - Registered users can edit/delete their own events.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+- **Admin page** - This page is restricted to the site administrator and is used for the full control of all tournament features.
 
----
+   **Planned Features:**
+  * The site should be responsive, intuitive and easy to navigate on all devices.
+  * Home page should provide easy navigation.
+  * Users should be able to easily register/login/logout.
+  * Only registered users can update or delete comments and events.
+  * Unregistered users can view the posts without comments.
 
-Happy coding!
+## User Experience: Skeleton
+For this project [bootstrap template](https://themewagon.com/themes/free-bootstrap-html5-sports-website-template-soccer/) was used.
+
+## User Experience: Technologies
+* HTML5 
+* CSS3 
+* Python
+* Django
+* FontAwesome 
+* Google Fonts
+* GitPod 
+* GitHub  
+* Heroku
+
