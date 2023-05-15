@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-lvb9lqcn13dkdg@eorwl60h(m-5nqdc74z05ou^#(y+d1k*s8c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-nikitalevsk-codeinstitu-1nawh8llkqn.ws-eu96b.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-nikitalevsk-codeinstitu-1nawh8llkqn.ws-eu96b.gitpod.io',
+                        'https://8000-nikitalevsk-codeinstitu-7qx4nbgv0ul.ws-eu97.gitpod.io']
 
 ALLOWED_HOSTS = []
 
