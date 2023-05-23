@@ -1,1 +1,1 @@
-web: gunicorn footbalPrj.wsgi:application
+web: gunicorn footballPrj.wsgi:application
