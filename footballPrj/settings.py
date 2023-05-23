@@ -34,7 +34,7 @@ DEBUG = True
 CSRF_TRUSTED_ORIGINS = ['https://8000-nikitalevsk-codeinstitu-1nawh8llkqn.ws-eu96b.gitpod.io',
                         'https://8000-nikitalevsk-codeinstitu-7qx4nbgv0ul.ws-eu97.gitpod.io']
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['world-cup-event.herokuapp.com']
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
