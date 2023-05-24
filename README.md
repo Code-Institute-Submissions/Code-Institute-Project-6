@@ -73,25 +73,25 @@ For this project [bootstrap template](https://themewagon.com/themes/free-bootstr
 
 ## Existing Features
 * Navbar: There is a consistent navbar present for all pages within the site.
-<img src="footballPrj/pictures/navbar.png" width="500">
+<img src="pictures/navbar.png" width="500">
 
 * Footer: There is a consistent footer present for all pages within the site.
-<img src="footballPrj/pictures/footer.png" width="500">
+<img src="pictures/footer.png" width="500">
 
 * Home page: Home page immediately enables visitors to see current events, score table and next game.
-<img src="footballPrj/pictures/home.png" width="500">
+<img src="pictures/home.png" width="500">
 
 * Add game: The page allows users to add new event to the tournament.
-<img src="footballPrj/pictures/game.png" width="500">
+<img src="pictures/game.png" width="500">
 
 * Register page: This page can be opened via the register button in the navigation bar.New site visitors are simply asked to enter username, email address, password and password confirmation to register for the use of this site. Once successfully registered, users will be redirected to the home page.
-<img src="footballPrj/pictures/registration.png" width="500">
+<img src="pictures/registration.png" width="500">
 
 * Login page: Registered and returning users can use the login button to open the login page and supply their username and password to login. On successful login, users will be redirected to the home page and they will be aware of it due to login username displayed in the upper right navbar area.
-<img src="footballPrj/pictures/login.png" width="500">
+<img src="pictures/login.png" width="500">
 
 * Delete event page: Delete event page for registered users only.
-<img src="footballPrj/pictures/delete.png" width="500">
+<img src="pictures/delete.png" width="500">
 
 ## Features Left to Implement
 Due to the short space of time given to complete this project, I was unable to implement following planned features:
