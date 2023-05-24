@@ -21,7 +21,7 @@ This site has intention of enabling users not only to read and review football e
  * Enable every user to easily log in.
 
 ## User Experience: User Stories
-1. As a Site Admin I can create, edit and delete posts so that I can fully manage blog content (implemented).
+1. As a Site Admin I can create, edit and delete posts so that I can fully manage event content (implemented).
 2. As a Site Admin I can edit and delete comments so that I have full CRUD control over the comments section (not implemented).
 3. As a site user I can view a list of events (implemented).
 4. As a site user I can register my own account so that I can add new events (implemented).
