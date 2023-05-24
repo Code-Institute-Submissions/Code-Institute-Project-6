@@ -54,6 +54,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -82,7 +83,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'footballPrj.wsgi.application'
 
-os.environ.setdefault("DATABASE_URL", "my_copied_database_url")
+#os.environ.setdefault("DATABASE_URL", "my_copied_database_url")
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -143,3 +144,5 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = BASE_DIR / "staticfiles"
