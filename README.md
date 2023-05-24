@@ -57,6 +57,9 @@ The registered users can leave comments and see other users's comments below all
   * Only registered users can update or delete comments and events.
   * Unregistered users can view the posts without comments.
 
+  **Features to implement:**
+  * Calculation points for each team and sorting them depending on the score
+
 ## User Experience: Skeleton
 For this project [bootstrap template](https://themewagon.com/themes/free-bootstrap-html5-sports-website-template-soccer/) was used.
 
